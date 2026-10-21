@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Pawvia Pet Waste Removal</title>
+  <meta name="description" content="Manage your recurring yard cleanup visits, track service history, update gate access notes, and review billing in the Pawvia Customer Portal.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/theme-rtl.js"></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="dash-page-body" id="customerDashboardRoot">
+
+  <div class="dash-layout">
+
+    <!-- DESKTOP / TABLET SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Customer Dashboard Navigation">
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="dash-brand" aria-label="Pawvia Homepage">
+          <div class="dash-brand-icon">
+            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor" opacity="0.7" />
+              <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor" />
+              <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor" />
+              <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor" opacity="0.7" />
+              <path d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="dash-brand-text">
+            <span class="dash-brand-name">Paw<span>via</span></span>
+            <span class="dash-brand-tagline">Customer Portal</span>
+          </div>
+        </a>
+        <button type="button" class="dash-modal-close" id="dashSidebarClose" style="display: none;" aria-label="Close Sidebar">✕</button>
+      </div>
+
+      <!-- Customer Profile Mini Card -->
+      <div class="dash-user-card">
+        <div class="dash-user-avatar" id="dashUserAvatarInitials">AM</div>
+        <div class="dash-user-meta">
+          <h4 id="dashSidebarUserName">Alex Morgan</h4>
+          <p><span class="status-dot"></span> Active Recurring Member</p>
+        </div>
+      </div>
+
+      <!-- Sidebar Navigation Menu -->
+      <nav class="dash-nav" aria-label="Dashboard Sections">
+        <span class="dash-nav-section-title">Main Menu</span>
+
+        <a href="#overview" class="dash-nav-link active" data-dash-tab="overview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          <span>Overview</span>
+        </a>
+
+        <a href="#schedule" class="dash-nav-link" data-dash-tab="schedule">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="12" y1="14" x2="12" y2="18"/><line x1="10" y1="16" x2="14" y2="16"/></svg>
+          <span>Schedule Cleanup</span>
+          <span class="dash-nav-badge">Book</span>
+        </a>
+
+        <a href="#upcoming" class="dash-nav-link" data-dash-tab="upcoming">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Upcoming Visits</span>
+          <span class="dash-nav-badge">3</span>
+        </a>
+
+        <a href="#history" class="dash-nav-link" data-dash-tab="history">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span>Service History</span>
+        </a>
+
+        <span class="dash-nav-section-title">Manage Account</span>
+
+        <a href="#subscription" class="dash-nav-link" data-dash-tab="subscription">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>My Subscription</span>
+        </a>
+
+        <a href="#billing" class="dash-nav-link" data-dash-tab="billing">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          <span>Payments &amp; Billing</span>
+        </a>
+
+        <a href="#addresses" class="dash-nav-link" data-dash-tab="addresses">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>My Addresses</span>
+        </a>
+
+        <a href="#profile" class="dash-nav-link" data-dash-tab="profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Profile Settings</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="dash-sidebar-footer">
+        <div class="dash-guarantee-pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>100% Gate-Locked Guarantee</span>
+        </div>
+        <a href="index.html" class="dash-sidebar-cta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span>Back to Pawvia Website</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="dash-main-wrap">
+
+      <!-- TOPBAR -->
+      <header class="dash-topbar" role="banner">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-mobile-toggle" id="dashSidebarToggle" aria-label="Open Navigation Sidebar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="dash-breadcrumbs">
+            <a href="index.html" class="dash-crumb-home">Pawvia</a>
+            <span class="dash-crumb-sep">/</span>
+            <span class="dash-breadcrumbs-current" id="dashBreadcrumbCurrent">Overview</span>
+          </div>
+          <div class="dash-route-badge">
+            <span class="dash-route-dot"></span>
+            <span>Springfield Route 4 Active Today • On Schedule</span>
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- RTL Toggle Button -->
+          <button type="button" class="dash-icon-btn" id="rtlToggleBtn" data-rtl-toggle aria-label="Toggle RTL Layout" title="Toggle RTL">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 21 12 17 16"/><line x1="21" y1="12" x2="9" y2="12"/><polyline points="7 16 3 12 7 8"/><line x1="3" y1="12" x2="10" y2="12"/></svg>
+          </button>
+
+          <!-- Theme Toggle Button -->
+          <button type="button" class="dash-icon-btn" id="themeToggleBtn" data-theme-toggle aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+            <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+
+          <!-- User Account Dropdown Trigger (Profile Icon Only) -->
+          <div class="user-menu-wrapper">
+            <button type="button" class="btn-user-account" id="userMenuBtn" aria-label="User Account Menu" aria-expanded="false" title="Account Menu">
+              <div class="user-avatar-placeholder">AM</div>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div class="user-dropdown" id="userDropdown" role="menu">
+              <div class="dropdown-header-status">
+                <div class="dropdown-user-name" id="dropdownUserName">Alex Morgan</div>
+                <div class="dropdown-user-sub"><span class="status-dot"></span> Active Customer</div>
+              </div>
+              <a href="dashboard.html" class="dropdown-item" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+                <span>User Dashboard</span>
+              </a>
+              <a href="admin-dashboard.html" class="dropdown-item" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Admin Dashboard</span>
+              </a>
+              <a href="login.html" class="dropdown-item" id="menuItemLogin" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                <span>Login</span>
+              </a>
+              <a href="signup.html" class="dropdown-item" id="menuItemSignup" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                <span>Sign Up</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="index.html" class="dropdown-item dropdown-item-danger" id="menuItemLogout" data-auth-action="logout" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                <span>Sign Out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="dash-content" role="main">
+
+        <!-- ===================================================================
+             TAB SECTIONS (Interactive Switcher)
+             =================================================================== -->
+
+        <!-- TAB 1: OVERVIEW & UPCOMING VISITS -->
+        <section class="dash-tab-section" id="tab-overview">
+
+          <!-- 1. PERSONALIZED WELCOME BANNER -->
+          <div class="dash-welcome-banner">
+            <div class="dash-welcome-text">
+              <h1 id="dashWelcomeName">Welcome back, Alex!</h1>
+              <p id="dashUpcomingSummary">Your lawn is in good hands. Your next scheduled yard cleanup is on <strong>Thursday, Oct 08 (8:00 AM - 11:30 AM)</strong> with technician <strong>Marcus Ramirez</strong>.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <button type="button" class="btn btn-primary" onclick="switchDashboardTab('schedule')">
+                <span>+ Schedule Cleanup</span>
+              </button>
+              <button type="button" class="btn btn-secondary" onclick="switchDashboardTab('subscription')">
+                <span>Plan Details</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. FOUR DASHBOARD OVERVIEW CARDS (KPIS) -->
+          <div class="dash-stats-grid">
+            <!-- Card 1: Next Cleanup -->
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Next Cleanup</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="kpiNextCleanupDate">Oct 08, 2026</div>
+              <div class="dash-stat-meta" id="kpiNextCleanupTech">
+                8:00 AM - 11:30 AM • Marcus Ramirez
+              </div>
+            </div>
+
+            <!-- Card 2: Active Subscription -->
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Active Plan</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="kpiSubName">Weekly Scoop</div>
+              <div class="dash-stat-meta">
+                <span class="dash-stat-pill dash-pill-green">Active</span>
+                <span id="kpiSubMeta">$34/visit • 2 Dogs</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Total Visits Completed -->
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Visits Completed</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="kpiTotalVisits">24 Visits</div>
+              <div class="dash-stat-meta" id="kpiTotalVisitsMeta">
+                385 lbs waste safely diverted
+              </div>
+            </div>
+
+            <!-- Card 4: Next Payment -->
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Next Payment</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="kpiNextPayment">$136.00</div>
+              <div class="dash-stat-meta" id="kpiNextPaymentMeta">
+                Due Nov 01, 2026 (Auto-Pay)
+              </div>
+            </div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Upcoming Scheduled Visits
+                </h3>
+                <p class="dash-card-subtitle">Technicians arrive within the guaranteed time window and send timestamped gate-locked photos.</p>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="switchDashboardTab('schedule')">+ Book Cleanup</button>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Upcoming Cleanups">
+                <thead>
+                  <tr>
+                    <th>Visit ID</th>
+                    <th>Date &amp; Arrival Window</th>
+                    <th>Service Type</th>
+                    <th>Yard Address</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="upcomingVisitsTableBody">
+                  <!-- Rendered dynamically by js/dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Yard Health & Biosecurity Assurance Card -->
+          <div style="background-color: var(--color-warm-cream); border: 1.5px solid var(--color-border); border-radius: 16px; padding: 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 48px; height: 48px; border-radius: 12px; background-color: var(--color-forest-green); color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <h4 style="margin: 0; font-size: 1.05rem; color: var(--color-forest-green); font-weight: 800;">Hospital-Grade Biosecurity Active</h4>
+                <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--color-forest-muted); max-width: 600px;">Every scooping rake, shoe cover, and bin is treated with veterinary-certified virucidal solution before entering your gate to ensure complete family &amp; pet safety.</p>
+              </div>
+            </div>
+            <a href="about.html" class="btn-dash-sm">Read Safety Protocol →</a>
+          </div>
+        </section>
+
+        <!-- TAB 2: SCHEDULE CLEANUP SECTION -->
+        <section class="dash-tab-section" id="tab-schedule" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Schedule a Yard Cleanup Visit</h3>
+                <p class="dash-card-subtitle">Choose your preferred date, arrival window, frequency, and custom yard access instructions.</p>
+              </div>
+            </div>
+
+            <form id="scheduleCleanupForm">
+              <div class="dash-form-grid">
+                <!-- Cleanup Frequency -->
+                <div class="dash-form-group dash-form-full">
+                  <label class="dash-form-label">Service Frequency &amp; Pricing Tier</label>
+                  <div class="dash-radio-group">
+                    <div class="dash-radio-card active">
+                      <input type="radio" name="frequency" value="weekly" checked style="display: none;">
+                      <span class="dash-radio-title">Weekly Scoop</span>
+                      <span class="dash-radio-desc">Best for 1-2 dogs • Most popular</span>
+                      <span class="dash-radio-price">$34.00 / visit</span>
+                    </div>
+                    <div class="dash-radio-card">
+                      <input type="radio" name="frequency" value="biweekly" style="display: none;">
+                      <span class="dash-radio-title">Bi-Weekly Scoop</span>
+                      <span class="dash-radio-desc">Every other week schedule</span>
+                      <span class="dash-radio-price">$44.00 / visit</span>
+                    </div>
+                    <div class="dash-radio-card">
+                      <input type="radio" name="frequency" value="onetime" style="display: none;">
+                      <span class="dash-radio-title">One-Time Overhaul</span>
+                      <span class="dash-radio-desc">Spring thaw / move-out clean</span>
+                      <span class="dash-radio-price">$79.00 flat</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service Date -->
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="schedDate">Preferred Service Date *</label>
+                  <input type="date" class="dash-input" id="schedDate" required>
+                </div>
+
+                <!-- Time Slot -->
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="schedTimeSlot">Preferred Arrival Window *</label>
+                  <select class="dash-select" id="schedTimeSlot" required>
+                    <option value="8:00 AM - 11:30 AM">Morning (8:00 AM – 11:30 AM)</option>
+                    <option value="11:30 AM - 2:30 PM">Midday (11:30 AM – 2:30 PM)</option>
+                    <option value="2:30 PM - 6:00 PM">Afternoon (2:30 PM – 6:00 PM)</option>
+                  </select>
+                </div>
+
+                <!-- Service Address -->
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="schedServiceAddress">Service Yard Location *</label>
+                  <select class="dash-select" id="schedServiceAddress" required>
+                    <!-- Populated dynamically from saved addresses -->
+                  </select>
+                </div>
+
+                <!-- Number of Dogs -->
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="schedDogsCount">Number of Dogs in Yard</label>
+                  <select class="dash-select" id="schedDogsCount">
+                    <option value="1">1 Dog</option>
+                    <option value="2" selected>2 Dogs</option>
+                    <option value="3">3 Dogs (+ $8/visit)</option>
+                    <option value="4">4+ Dogs (Multi-pet)</option>
+                  </select>
+                </div>
+
+                <!-- Special Instructions -->
+                <div class="dash-form-group dash-form-full">
+                  <label class="dash-form-label" for="schedInstructions">Gate Access Notes &amp; Special Pet Instructions</label>
+                  <textarea class="dash-textarea" id="schedInstructions" rows="3" placeholder="e.g. Side gate code is #4192. Please make sure the latch clicks shut. Charlie the Golden Retriever is friendly and loves belly rubs!"></textarea>
+                </div>
+              </div>
+
+              <!-- Booking summary & confirm button -->
+              <div style="margin-top: 24px; padding-top: 20px; border-top: 1.5px solid var(--color-border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                <div>
+                  <span style="font-size: 0.85rem; color: var(--color-forest-muted);">Estimated Visit Cost:</span>
+                  <div style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--color-forest-green);" id="schedPricePreview">$34.00</div>
+                  <span style="font-size: 0.75rem; color: var(--color-leaf-green); font-weight: 700;">✓ Includes Bio-Shield Sanitization &amp; Odor Spray</span>
+                </div>
+                <button type="submit" class="btn btn-primary" style="padding: 14px 28px; font-size: 1rem;">
+                  <span>Confirm &amp; Schedule Cleanup</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- TAB 3: UPCOMING VISITS (Detailed View) -->
+        <section class="dash-tab-section" id="tab-upcoming" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Manage Scheduled Cleanups</h3>
+                <p class="dash-card-subtitle">Need to reschedule or cancel a visit? You can make adjustments online up to 2 hours before arrival.</p>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="switchDashboardTab('schedule')">+ Book New Visit</button>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Upcoming Cleanups List">
+                <thead>
+                  <tr>
+                    <th>Visit ID</th>
+                    <th>Date &amp; Time Window</th>
+                    <th>Service Type</th>
+                    <th>Yard Address</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="upcomingVisitsTableBody2">
+                  <!-- Mirrored / dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: SERVICE HISTORY SECTION -->
+        <section class="dash-tab-section" id="tab-history" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Completed Cleanups &amp; Gate Verification</h3>
+                <p class="dash-card-subtitle">Review previous visits, technician biosecurity notes, and timestamped gate-lock verification logs.</p>
+              </div>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Service History">
+                <thead>
+                  <tr>
+                    <th>Visit ID</th>
+                    <th>Date</th>
+                    <th>Scooper</th>
+                    <th>Service Notes &amp; Biosecurity</th>
+                    <th>Rating</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody id="serviceHistoryTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 5: MY SUBSCRIPTION SECTION -->
+        <section class="dash-tab-section" id="tab-subscription" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Recurring Subscription Plan</h3>
+                <p class="dash-card-subtitle">Manage your weekly or bi-weekly yard waste removal schedule with zero long-term contracts.</p>
+              </div>
+              <span class="badge-status badge-status-active" id="subPlanStatus">Active</span>
+            </div>
+
+            <div class="sub-plan-box">
+              <div class="sub-plan-header">
+                <div>
+                  <h4 style="margin: 0; font-size: 1.35rem; font-weight: 800; color: var(--color-forest-green);" id="subPlanName">Weekly Scoop &amp; Sanitize</h4>
+                  <p style="margin: 4px 0 0; font-size: 0.9rem; color: var(--color-forest-muted);" id="subPlanDogs">2 Dogs (Charlie &amp; Bella)</p>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--color-forest-green);" id="subPlanPrice">$34.00 / visit ($136.00 / mo)</div>
+                  <span style="font-size: 0.8rem; color: var(--color-forest-muted);">Next auto-renewal: <strong id="subPlanRenewal">Nov 01, 2026</strong></span>
+                </div>
+              </div>
+
+              <div style="margin: 18px 0; border-top: 1px solid var(--color-border); padding-top: 16px;">
+                <strong style="font-size: 0.9rem; color: var(--color-forest-green);">Included with Every Pawvia Visit:</strong>
+                <ul class="sub-feature-list">
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Full front, side &amp; back yard waste sweep</span>
+                  </li>
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Bio-Shield veterinary disinfectant between yards</span>
+                  </li>
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Timestamped gate latch verification photo text</span>
+                  </li>
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Organic peppermint lawn deodorizer spray</span>
+                  </li>
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>100% Satisfaction Guarantee (Free 24h re-scoop)</span>
+                  </li>
+                  <li class="sub-feature-item">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Zero contract commitments — pause or cancel anytime</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Action buttons -->
+              <div class="btn-action-group" style="padding-top: 14px; border-top: 1px solid var(--color-border); flex-wrap: wrap;">
+                <button type="button" class="btn btn-primary" onclick="openChangePlanModal()">Upgrade / Change Plan</button>
+                <button type="button" class="btn btn-secondary" id="btnPauseSub" onclick="togglePauseSubscription()">Pause Subscription</button>
+                <button type="button" class="btn-dash-sm btn-dash-danger" onclick="togglePauseSubscription()">Cancel Plan</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: PAYMENTS & BILLING SECTION -->
+        <section class="dash-tab-section" id="tab-billing" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Billing &amp; Payment History</h3>
+                <p class="dash-card-subtitle">Transparent invoices and hassle-free automatic monthly billing for your weekly cleanup schedule.</p>
+              </div>
+              <button type="button" class="btn-dash-sm btn-dash-primary" onclick="openAddCardModal()">+ Add Payment Card</button>
+            </div>
+
+            <!-- Saved cards -->
+            <div style="margin-bottom: 24px;">
+              <h4 style="margin: 0 0 12px; font-size: 0.95rem; color: var(--color-forest-green);">Saved Payment Methods</h4>
+              <div id="savedPaymentCardsList" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Invoices table -->
+            <h4 style="margin: 0 0 12px; font-size: 0.95rem; color: var(--color-forest-green);">Transaction Invoices</h4>
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Payment Transactions">
+                <thead>
+                  <tr>
+                    <th>Invoice ID</th>
+                    <th>Date</th>
+                    <th>Coverage Period</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                    <th>Status</th>
+                    <th>Invoice</th>
+                  </tr>
+                </thead>
+                <tbody id="paymentsTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 7: MY ADDRESSES SECTION -->
+        <section class="dash-tab-section" id="tab-addresses" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Service Locations &amp; Gate Codes</h3>
+                <p class="dash-card-subtitle">Manage residential yard addresses, gate lock combinations, and scooper access instructions.</p>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="openAddAddressModal()">+ Add New Yard Location</button>
+            </div>
+
+            <div class="dash-address-grid" id="addressCardsGrid">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 8: PROFILE SETTINGS SECTION -->
+        <section class="dash-tab-section" id="tab-profile" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Customer Profile &amp; Contact Info</h3>
+                <p class="dash-card-subtitle">Keep your contact phone updated to ensure you receive automatic gate-locked photo notifications.</p>
+              </div>
+            </div>
+
+            <form id="profileSettingsForm">
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="profileFullName">Full Customer Name</label>
+                  <input type="text" class="dash-input" id="profileFullName" value="Alex Morgan" required>
+                </div>
+
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="profileEmail">Email Address (Invoices &amp; Receipts)</label>
+                  <input type="email" class="dash-input" id="profileEmail" value="alex.morgan@example.com" required>
+                </div>
+
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="profilePhone">Mobile Phone (For Arrival &amp; Gate Photo Texts)</label>
+                  <input type="tel" class="dash-input" id="profilePhone" value="(555) 234-8971" required>
+                </div>
+
+                <div class="dash-form-group">
+                  <label class="dash-form-label" for="profilePassword">Change Password</label>
+                  <input type="password" class="dash-input" id="profilePassword" placeholder="Enter new password (optional)">
+                </div>
+
+                <div class="dash-form-group dash-form-full">
+                  <label class="dash-form-label" for="profileGateNotes">Default Gate Latch &amp; Pet Safety Warning</label>
+                  <textarea class="dash-textarea" id="profileGateNotes" rows="2"></textarea>
+                </div>
+
+                <!-- Notification checkboxes -->
+                <div class="dash-form-group dash-form-full">
+                  <label class="dash-form-label">Visit Text &amp; Notification Preferences</label>
+                  <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer;">
+                      <input type="checkbox" id="chkSmsPhoto" checked>
+                      <span>Text me a timestamped photo of the closed and locked gate after every single visit</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer;">
+                      <input type="checkbox" id="chkSmsEta" checked>
+                      <span>Text me a 15-minute arrival ETA alert when the scooper is en route</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.88rem; cursor: pointer;">
+                      <input type="checkbox" id="chkEmailReceipts" checked>
+                      <span>Email monthly billing statements and payment receipts</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 24px; padding-top: 18px; border-top: 1.5px solid var(--color-border); display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary" style="padding: 12px 26px;">Save Profile Changes</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODALS SYSTEM
+       ========================================================================= -->
+
+  <!-- 1. RESCHEDULE VISIT MODAL -->
+  <div class="dash-modal-overlay" id="rescheduleModal" role="dialog" aria-modal="true" aria-labelledby="rescheduleModalTitle">
+    <div class="dash-modal-box">
+      <div class="dash-modal-header">
+        <h3 id="rescheduleModalTitle">Reschedule Yard Cleanup</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <form id="rescheduleForm">
+        <div class="dash-modal-body">
+          <p id="rescheduleVisitInfo" style="margin: 0 0 16px; font-size: 0.9rem; color: var(--color-forest-muted);"></p>
+          <div class="dash-form-group" style="margin-bottom: 14px;">
+            <label class="dash-form-label" for="rescheduleDate">New Cleanup Date *</label>
+            <input type="date" class="dash-input" id="rescheduleDate" required>
+          </div>
+          <div class="dash-form-group">
+            <label class="dash-form-label" for="rescheduleWindow">Preferred Time Slot *</label>
+            <select class="dash-select" id="rescheduleWindow" required>
+              <option value="8:00 AM - 11:30 AM">Morning (8:00 AM – 11:30 AM)</option>
+              <option value="11:30 AM - 2:30 PM">Midday (11:30 AM – 2:30 PM)</option>
+              <option value="2:30 PM - 6:00 PM">Afternoon (2:30 PM – 6:00 PM)</option>
+            </select>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn-dash-sm" data-dash-modal-close>Back</button>
+          <button type="submit" class="btn btn-primary">Save New Date</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. CANCEL VISIT MODAL -->
+  <div class="dash-modal-overlay" id="cancelVisitModal" role="dialog" aria-modal="true" aria-labelledby="cancelVisitTitle">
+    <div class="dash-modal-box">
+      <div class="dash-modal-header">
+        <h3 id="cancelVisitTitle">Cancel Scheduled Visit</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <form id="cancelVisitForm">
+        <div class="dash-modal-body">
+          <p id="cancelVisitInfo" style="margin: 0 0 16px; font-size: 0.92rem; color: var(--color-forest-text); line-height: 1.5;"></p>
+          <div class="dash-form-group">
+            <label class="dash-form-label" for="cancelReason">Reason for cancellation (optional)</label>
+            <select class="dash-select" id="cancelReason">
+              <option value="traveling">Traveling / Out of town</option>
+              <option value="lawn-mowed">Yard undergoing landscaping</option>
+              <option value="weather">Severe local weather</option>
+              <option value="other">Other reason</option>
+            </select>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn-dash-sm" data-dash-modal-close>Keep Visit</button>
+          <button type="submit" class="btn-dash-sm btn-dash-danger" style="padding: 10px 18px;">Confirm Cancellation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. INVOICE MODAL -->
+  <div class="dash-modal-overlay" id="invoiceModal" role="dialog" aria-modal="true" aria-labelledby="invoiceModalTitle">
+    <div class="dash-modal-box" style="max-width: 640px;">
+      <div class="dash-modal-header">
+        <h3 id="invoiceModalTitle">Pawvia Service Invoice</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <div class="dash-modal-body" id="invoiceModalBody">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="dash-modal-footer">
+        <button type="button" class="btn-dash-sm" onclick="window.print()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Invoice
+        </button>
+        <button type="button" class="btn btn-primary" data-dash-modal-close>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. CHANGE PLAN MODAL -->
+  <div class="dash-modal-overlay" id="changePlanModal" role="dialog" aria-modal="true" aria-labelledby="changePlanTitle">
+    <div class="dash-modal-box">
+      <div class="dash-modal-header">
+        <h3 id="changePlanTitle">Upgrade or Change Plan</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <form id="changePlanForm">
+        <div class="dash-modal-body">
+          <p style="margin: 0 0 16px; font-size: 0.88rem; color: var(--color-forest-muted);">Select the service frequency that fits your dogs. Changes take effect on your next scheduled billing cycle.</p>
+          <div class="dash-form-group">
+            <label class="dash-form-label" for="selectNewPlan">Choose New Plan Tier</label>
+            <select class="dash-select" id="selectNewPlan">
+              <option value="weekly-1">Weekly Scoop — 1 Dog ($28/visit • $112/mo)</option>
+              <option value="weekly-2" selected>Weekly Scoop &amp; Sanitize — 2 Dogs ($34/visit • $136/mo)</option>
+              <option value="weekly-3">Weekly Premium — 3+ Dogs ($42/visit • $168/mo)</option>
+              <option value="biweekly">Bi-Weekly Yard Service ($44/visit • $88/mo)</option>
+            </select>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn-dash-sm" data-dash-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Update Plan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. ADD ADDRESS MODAL -->
+  <div class="dash-modal-overlay" id="addAddressModal" role="dialog" aria-modal="true" aria-labelledby="addAddrTitle">
+    <div class="dash-modal-box">
+      <div class="dash-modal-header">
+        <h3 id="addAddrTitle">Add New Yard Service Location</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <form id="addAddressForm">
+        <div class="dash-modal-body">
+          <div class="dash-form-group" style="margin-bottom: 12px;">
+            <label class="dash-form-label" for="newAddrLabel">Yard Label (e.g. Vacation Home, Cottage)</label>
+            <input type="text" class="dash-input" id="newAddrLabel" required placeholder="Primary Yard">
+          </div>
+          <div class="dash-form-group" style="margin-bottom: 12px;">
+            <label class="dash-form-label" for="newAddrStreet">Street Address</label>
+            <input type="text" class="dash-input" id="newAddrStreet" required placeholder="123 Oak Street">
+          </div>
+          <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+            <div class="dash-form-group">
+              <label class="dash-form-label" for="newAddrCity">City</label>
+              <input type="text" class="dash-input" id="newAddrCity" value="Springfield">
+            </div>
+            <div class="dash-form-group">
+              <label class="dash-form-label" for="newAddrState">State</label>
+              <input type="text" class="dash-input" id="newAddrState" value="OR">
+            </div>
+            <div class="dash-form-group">
+              <label class="dash-form-label" for="newAddrZip">ZIP</label>
+              <input type="text" class="dash-input" id="newAddrZip" value="97477">
+            </div>
+          </div>
+          <div class="dash-form-group" style="margin-bottom: 12px;">
+            <label class="dash-form-label" for="newAddrGate">Gate Location &amp; Lock Code</label>
+            <input type="text" class="dash-input" id="newAddrGate" placeholder="e.g. Left wooden gate, padlock code #5521">
+          </div>
+          <div class="dash-form-group">
+            <label class="dash-form-label" for="newAddrNotes">Access Instructions</label>
+            <textarea class="dash-textarea" id="newAddrNotes" rows="2" placeholder="e.g. Watch out for Rocky the Boxer. Latch sticks slightly."></textarea>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn-dash-sm" data-dash-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Address</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. ADD CARD MODAL -->
+  <div class="dash-modal-overlay" id="addCardModal" role="dialog" aria-modal="true" aria-labelledby="addCardTitle">
+    <div class="dash-modal-box">
+      <div class="dash-modal-header">
+        <h3 id="addCardTitle">Add Payment Method</h3>
+        <button type="button" class="dash-modal-close" data-dash-modal-close aria-label="Close">✕</button>
+      </div>
+      <form id="addCardForm">
+        <div class="dash-modal-body">
+          <div class="dash-form-group" style="margin-bottom: 12px;">
+            <label class="dash-form-label" for="cardName">Cardholder Name</label>
+            <input type="text" class="dash-input" id="cardName" value="Alex Morgan" required>
+          </div>
+          <div class="dash-form-group" style="margin-bottom: 12px;">
+            <label class="dash-form-label" for="cardNum">Card Number</label>
+            <input type="text" class="dash-input" id="cardNum" placeholder="•••• •••• •••• 4242" required maxlength="19">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="dash-form-group">
+              <label class="dash-form-label" for="cardExp">Expiry Date (MM/YY)</label>
+              <input type="text" class="dash-input" id="cardExp" placeholder="10/28" required maxlength="5">
+            </div>
+            <div class="dash-form-group">
+              <label class="dash-form-label" for="cardCvv">Security CVV</label>
+              <input type="password" class="dash-input" id="cardCvv" placeholder="123" required maxlength="4">
+            </div>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn-dash-sm" data-dash-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Card</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="dash-toast-container" id="dashToastContainer"></div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

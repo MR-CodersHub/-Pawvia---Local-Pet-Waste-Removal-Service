@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pawvia | Premium Dog Waste Removal & Yard Sanitization</title>
+  <meta name="description" content="Quick booking and instant quotes for professional pet waste removal. Reliable weekly yard scooping, gate lock guarantee, and sanitized equipment.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/theme-rtl.js"></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-announcement">
+        <span class="topbar-badge">INSTANT QUOTE</span>
+        <span>Get your lawn scooped this week! No contracts, cancel anytime.</span>
+      </div>
+      <div class="topbar-contact">
+        <a href="tel:8885557667">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (888) 555-POOP
+        </a>
+        <a href="mailto:support@pawvia.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          support@pawvia.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Pawvia Homepage">
+        <div class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor" opacity="0.7"/>
+            <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor"/>
+            <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor"/>
+            <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor" opacity="0.7"/>
+            <path d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Paw<span>via</span></span>
+          <span class="logo-tagline">Pet Waste Removal</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link active">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link nav-dropdown-btn" id="navDashDropdownBtn" aria-expanded="false" aria-haspopup="true">
+            <span>Dashboard</span>
+            <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="navDashDropdownMenu" role="menu" aria-label="Dashboard Options">
+            <a href="admin-dashboard.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Admin Dashboard</span>
+                <span class="nav-dropdown-desc">Management & Ops</span>
+              </div>
+            </a>
+            <a href="dashboard.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+              </div>
+              <div class="nav-dropdown-text">
+                <span class="nav-dropdown-title">User Dashboard</span>
+                <span class="nav-dropdown-desc">Customer Portal</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <!-- User Account Menu -->
+        <div class="user-menu-wrapper">
+          <button type="button" class="btn-user-account header-icon-btn" id="userMenuBtn" aria-label="User Account Menu" aria-expanded="false" title="Account Menu">
+            <div class="user-avatar-placeholder">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+          </button>
+
+          <div class="user-dropdown" id="userDropdown" role="menu" aria-label="Account Navigation">
+            <div class="dropdown-header-status">
+              <div class="dropdown-user-name" id="dropdownUserName">Alex Morgan</div>
+              <div class="dropdown-user-sub" id="dropdownUserStatus"><span class="status-dot"></span> Active Customer</div>
+            </div>
+            <a href="dashboard.html" class="dropdown-item" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+              <span>User Dashboard</span>
+            </a>
+            <a href="admin-dashboard.html" class="dropdown-item" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <span>Admin Dashboard</span>
+            </a>
+            <a href="login.html" class="dropdown-item" id="menuItemLogin" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <polyline points="10 17 15 12 10 7" />
+                <line x1="15" y1="12" x2="3" y2="12" />
+              </svg>
+              <span>Login</span>
+            </a>
+            <a href="signup.html" class="dropdown-item" id="menuItemSignup" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <line x1="20" y1="8" x2="20" y2="14" />
+                <line x1="23" y1="11" x2="17" y2="11" />
+              </svg>
+              <span>Sign Up</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-item-danger" id="menuItemLogout" data-auth-action="logout" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+              </svg>
+              <span>Sign Out</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="header-icon-btn" id="themeToggleBtn" data-theme-toggle
+          aria-label="Switch to Dark Mode" aria-pressed="false" title="Toggle Dark/Light Theme">
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- RTL Toggle Button -->
+        <button type="button" class="header-icon-btn" id="rtlToggleBtn" data-rtl-toggle
+          aria-label="Switch to Right-to-Left Layout" aria-pressed="false" title="Toggle RTL/LTR Layout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="17 8 21 12 17 16"/><line x1="21" y1="12" x2="9" y2="12"/>
+            <polyline points="7 16 3 12 7 8"/><line x1="3" y1="12" x2="10" y2="12"/>
+          </svg>
+        </button>
+
+        <!-- CTA Button in Last Position -->
+        <button type="button" class="btn btn-primary btn-book-now" data-trigger-booking>Book Now</button>
+
+        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <!-- User Account Card in Mobile Menu -->
+    <div class="mobile-user-card" id="mobileUserCard">
+      <div class="mobile-user-header">
+        <div class="mobile-user-avatar" id="mobileUserAvatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <div class="mobile-user-info">
+          <div class="mobile-user-name" id="mobileUserName">Alex Morgan</div>
+          <div class="mobile-user-sub" id="mobileUserStatus">
+            <span class="status-dot"></span> Active Customer
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-user-actions">
+        <a href="dashboard.html" class="mobile-dash-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+          <span>User Dashboard</span>
+        </a>
+        <a href="admin-dashboard.html" class="mobile-dash-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          <span>Admin Portal</span>
+        </a>
+      </div>
+
+      <div class="mobile-auth-row" id="mobileAuthRow">
+        <a href="login.html" class="btn btn-outline mobile-auth-btn" id="mobileLoginBtn">Login</a>
+        <a href="signup.html" class="btn btn-primary mobile-auth-btn" id="mobileSignupBtn">Sign Up</a>
+        <button type="button" class="btn btn-outline mobile-auth-btn mobile-logout-btn" id="mobileLogoutBtn" data-auth-action="logout" style="display: none;">Sign Out</button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation Links">
+      <a href="index.html">Home</a>
+      <a href="home-2.html" class="active">Home 2</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <div class="mobile-nav-dropdown">
+        <button type="button" class="mobile-nav-dropdown-btn" aria-expanded="false">
+          <span>Dashboard</span>
+          <svg class="mobile-dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-nav-dropdown-menu">
+          <a href="admin-dashboard.html" class="mobile-dropdown-item">
+            <div class="nav-dropdown-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <div class="nav-dropdown-text">
+              <span class="nav-dropdown-title">Admin Dashboard</span>
+              <span class="nav-dropdown-desc">Management & Ops</span>
+            </div>
+          </a>
+          <a href="dashboard.html" class="mobile-dropdown-item">
+            <div class="nav-dropdown-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+            </div>
+            <div class="nav-dropdown-text">
+              <span class="nav-dropdown-title">User Dashboard</span>
+              <span class="nav-dropdown-desc">Customer Portal</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile CTA & Quick Contact in Menu -->
+    <div class="mobile-drawer-cta">
+      <button type="button" class="btn btn-primary btn-mobile-cta" data-trigger-booking>
+        <span>Book a Cleanup</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+      <div class="mobile-drawer-contact">
+        <a href="tel:8885557667">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          (888) 555-POOP
+        </a>
+        <a href="mailto:support@pawvia.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          support@pawvia.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HOME 2 HERO WITH INSTANT ESTIMATOR WIDGET -->
+    <section class="hero-home-2 geo-dots">
+      <div class="container hero-2-grid">
+        <div class="hero-content">
+          <div class="badge badge-green" style="margin-bottom: 12px; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Instant Online Booking • Clean Yard in 48 Hours</span>
+          </div>
+          <h1 style="font-size: clamp(2rem, 3.2vw, 2.9rem); line-height: 1.14; margin-bottom: 14px;">
+            A Spotless Yard Starts Here.<br>
+            <span class="hero-subline-accent">We Handle the Dirty Work.</span>
+          </h1>
+          <p class="lead" style="margin-bottom: 18px; font-size: 1rem; line-height: 1.5;">
+            Stop dreading lawn cleanup. Our reliable neighborhood scooping technicians keep your grass barefoot-clean, sanitized, and parasite-free. Simply select your dogs below for an instant quote.
+          </p>
+
+          <div class="hero-actions" style="margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <button type="button" class="btn btn-primary btn-lg" data-trigger-booking>
+              <span>Book a Cleanup</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+            <a href="pricing.html" class="btn btn-secondary btn-lg">View Pricing</a>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <span style="color: var(--color-clean-green); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <span style="font-weight: 600; font-size: 0.9rem;">No Long-Term Contracts</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <span style="color: var(--color-clean-green); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <span style="font-weight: 600; font-size: 0.9rem;">Gate Photo Confirmation</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <span style="color: var(--color-clean-green); font-weight: 800; font-size: 1.1rem;">✓</span>
+              <span style="font-weight: 600; font-size: 0.9rem;">Full Waste Haul-Away</span>
+            </div>
+          </div>
+
+          <!-- Trust Rating Bar -->
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="display: flex;">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Happy pet owner" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-right: -8px; object-fit: cover;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Satisfied customer" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; margin-right: -8px; object-fit: cover;">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Neighborhood resident" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; object-fit: cover;">
+            </div>
+            <div>
+              <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 2px; line-height: 1;">★★★★★</div>
+              <div style="font-size: 0.82rem; font-weight: 700; color: var(--color-forest-green);">4.9 / 5.0 <span style="font-weight: 400; color: var(--color-forest-muted);">(5,200+ clean yards)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Quick Estimator Card -->
+        <div class="quick-estimator-card" id="home2Estimator">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 16px; height: 130px; position: relative; box-shadow: var(--shadow-sm);">
+            <img src="assets/tech-scooping-lawn.jpg" alt="Professional pet waste technician scooping lawn with long-handled rake and sealed bucket" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <div style="position: absolute; bottom: 8px; left: 10px; background: rgba(18, 53, 36, 0.88); color: #fff; padding: 5px 10px; border-radius: 20px; font-size: 0.76rem; font-weight: 700; display: flex; align-items: center; gap: 6px; backdrop-filter: blur(4px);">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 100% Locked Gate Guarantee
+            </div>
+          </div>
+          <div class="estimator-title" style="margin-bottom: 4px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span>Instant Rate Estimator</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color-grey-400); margin-bottom: 14px;">
+            Choose your options to see exact local route pricing:
+          </p>
+
+          <span class="estimator-step-label">1. How Many Dogs?</span>
+          <div class="estimator-options-group">
+            <button type="button" class="option-btn active" data-dogs="1">1 Dog</button>
+            <button type="button" class="option-btn" data-dogs="2">2 Dogs</button>
+            <button type="button" class="option-btn" data-dogs="3">3+ Dogs</button>
+          </div>
+
+          <span class="estimator-step-label">2. Preferred Frequency</span>
+          <div class="estimator-options-group">
+            <button type="button" class="option-btn active" data-freq="weekly">Weekly</button>
+            <button type="button" class="option-btn" data-freq="biweekly">Every 2 Wks</button>
+            <button type="button" class="option-btn" data-freq="onetime">One-Time</button>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div class="estimator-result-box">
+            <div>
+              <div class="estimator-subtext">Estimated Route Rate</div>
+              <div class="estimator-price-display" id="estimatorTotal">$19</div>
+            </div>
+            <span class="badge badge-dark" id="estimatorPeriod">/weekly visit</span>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="estimatorBookBtn" style="width: 100%;">
+            Book This Schedule Now
+          </button>
+          <div style="text-align: center; margin-top: 8px; font-size: 0.76rem; color: var(--color-grey-400);">
+            Includes full perimeter sweep, disinfectant treatment &amp; gate locked photo.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PROMINENT PHOTOGRAPHY & EXPERIENCE BAR -->
+    <section class="section-sm bg-light">
+      <div class="container">
+        <div class="photo-feature-strip">
+          <div class="photo-feature-card">
+            <img src="assets/tech-apartment-lawn.jpg" alt="Uniformed technician maintaining clean community lawn with scooper and waste bag">
+            <div class="photo-feature-overlay">
+              <span class="photo-feature-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -1px; margin-right: 4px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Uniformed &amp; Insured
+              </span>
+              <p>Trusted Residential &amp; HOA Routes</p>
+            </div>
+          </div>
+          <div class="photo-feature-card">
+            <img src="assets/lawn-deodorizing-spray.jpg" alt="Technician applying organic deodorizing and sanitizing spray to backyard lawn">
+            <div class="photo-feature-overlay">
+              <span class="photo-feature-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -1px; margin-right: 4px;"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12c0-2.8 1.1-5.3 3-7.1"/><path d="M12 12c0-3 2-6 5-7"/></svg>100% Pet-Safe
+              </span>
+              <p>Organic Bio-Enzyme Turf Deodorizer</p>
+            </div>
+          </div>
+          <div class="photo-feature-card">
+            <img src="assets/clean-lawn-family.jpg" alt="Spotless green residential backyard lawn after complete pet waste removal service">
+            <div class="photo-feature-overlay">
+              <span class="photo-feature-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -1px; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Pristine Outdoor Spaces
+              </span>
+              <p>Clean, Safe Lawns for Kids &amp; Pets</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SERVICE HIGHLIGHTS & CAPABILITIES — MODERN BENTO REDESIGN -->
+    <section class="section capabilities-section" id="capabilities">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="capabilities-header">
+          <div class="capabilities-header-left">
+            <span class="badge badge-dark">OUR SPECIALTIES</span>
+            <h2 class="capabilities-title">Complete Yard<br><span class="text-highlight">Cleanliness Capabilities</span></h2>
+          </div>
+          <div class="capabilities-header-right">
+            <p class="capabilities-lead">From private suburban backyards to large residential communities and city dog parks, we deliver dependable, hospital-clean waste removal that keeps families, pets, and turf safe.</p>
+            <a href="services.html" class="btn btn-primary" style="align-self:flex-start; margin-top:12px;">Explore All Services →</a>
+          </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="capabilities-bento">
+
+          <!-- Card 1: Large Feature — Weekly Scooping (Span 7) -->
+          <div class="cap-card cap-card-featured">
+            <span class="cap-featured-pill">★ Most Popular Routine</span>
+            <div class="cap-card-top">
+              <span class="cap-card-num">01</span>
+              <div class="cap-card-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+            </div>
+            <h3>Residential Weekly Scooping</h3>
+            <p>Our gold standard. A dependable scheduled visit every 7 days eliminates pet waste before it burns lawn roots or tracks inside on paws. Background-checked, uniformed technicians with gate-lock verification every time.</p>
+            <div class="cap-card-tags">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Biosecure Sanitized Tools</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> Timestamped Gate Photo</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 100% Satisfaction Guarantee</span>
+            </div>
+            <div class="cap-card-footer">
+              <span class="cap-card-price">Starting at $19 / visit</span>
+              <a href="pricing.html" class="cap-card-link">View Weekly Plan →</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Bi-Weekly Service (Span 5) -->
+          <div class="cap-card cap-card-light">
+            <div class="cap-card-top">
+              <span class="cap-card-num">02</span>
+              <div class="cap-card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+            </div>
+            <h3>Bi-Weekly Yard Refresh</h3>
+            <p>A cost-effective solution tailored for single small dogs or low-traffic lawns. Keeps grass manageable and clean at a budget-friendly cadence without long-term commitments.</p>
+            <div class="cap-card-tags">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Alternate Weeks</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Budget-Friendly</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Safe Perimeter Check</span>
+            </div>
+          </div>
+
+          <!-- Card 3: One-Time Deep Clean (Span 4 - Dark Luxury) -->
+          <div class="cap-card cap-card-dark">
+            <div class="cap-card-top">
+              <span class="cap-card-num">03</span>
+              <div class="cap-card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+            </div>
+            <h3>One-Time Spring Deep Clean</h3>
+            <p>Intensive multi-pass grid sweeping for post-winter thaw, party prep, or moving into a new home. Clears months of heavy accumulation in one visit.</p>
+            <div class="cap-card-tags">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> No Contract</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg> Leaf &amp; Bed Sweep</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Deodorizer & Sanitizer (Span 8 - Accent & Metrics) -->
+          <div class="cap-card cap-card-accent">
+            <div class="cap-card-top">
+              <span class="cap-card-num">04</span>
+              <div class="cap-card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+            </div>
+            <h3>Turf Deodorizer &amp; Bio-Enzymatic Sanitizer</h3>
+            <p>Hospital-grade, 100% lick-safe botanical mist. Natural bio-catalysts digest uric acid crystals and fecal bacteria on natural grass, artificial turf, gravel runs, and concrete patios.</p>
+            <div class="cap-card-metrics-grid">
+              <div class="cap-card-metric">
+                <span class="cap-metric-value">99.8%</span>
+                <span class="cap-metric-label">Ammonia Neutralized</span>
+              </div>
+              <div class="cap-card-metric">
+                <span class="cap-metric-value">15 Min</span>
+                <span class="cap-metric-label">Paw-Safe Drying</span>
+              </div>
+              <div class="cap-card-metric">
+                <span class="cap-metric-value">100%</span>
+                <span class="cap-metric-label">Plant-Based Formula</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Waste Station Maintenance (Span 5) -->
+          <div class="cap-card cap-card-light cap-card-station">
+            <div class="cap-card-top">
+              <span class="cap-card-num">05</span>
+              <div class="cap-card-icon-wrap">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+            </div>
+            <h3>Dog Waste Station Servicing</h3>
+            <p>Complete commercial station installation, heavy-duty roll bag refilling, and weekly can sanitization for HOAs, apartment complexes, dog parks, and city facilities.</p>
+            <div class="cap-card-tags">
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="22" x2="9" y2="2"/><line x1="8" y1="6" x2="10" y2="6"/><line x1="14" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/></svg> HOA &amp; Parks</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Bag Roll Supply</span>
+              <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Sanitized Cans</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Commercial Route Grounds (Span 7 - Image Background) -->
+          <div class="cap-card cap-card-image">
+            <img src="assets/waste-station-hoa.jpg" alt="Professional outdoor dog waste station maintained by Pawvia" class="cap-card-bg-img">
+            <div class="cap-card-image-overlay">
+              <span class="cap-card-num-light">06 &bull; COMMERCIAL &amp; MUNICIPAL</span>
+              <h3>Commercial Grounds Maintenance</h3>
+              <p>Tailored recurring route scooping for apartment complexes, condominiums, veterinary clinics, and pet boarding resorts with insured staff.</p>
+              <a href="services.html#commercial" class="btn btn-primary" style="align-self:flex-start;">Request HOA Route Proposal →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRICING PREVIEWS -->
+    <section class="section bg-light" id="pricing-preview">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">VALUE &amp; CLARITY</span>
+          <h2>Straightforward Pricing Options</h2>
+          <p>Choose the cadence that matches your lifestyle. All plans include 100% off-site waste disposal.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Bi-Weekly</h3>
+              <p>For low-traffic yards or single small dogs</p>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">29</span>
+                <span class="pricing-period">/visit</span>
+              </div>
+            </div>
+            <div class="pricing-features-list">
+              <div class="feature-item"><span>✓ Complete lawn inspection</span></div>
+              <div class="feature-item"><span>✓ Equipment sanitized between yards</span></div>
+              <div class="feature-item"><span>✓ Gate closed &amp; photo verification</span></div>
+              <div class="feature-item"><span>✓ Waste removed from property</span></div>
+            </div>
+            <button type="button" class="btn btn-secondary" data-trigger-booking data-service-name="Bi-Weekly Cleanup">Select Bi-Weekly</button>
+          </div>
+
+          <div class="pricing-card featured">
+            <div class="card-ribbon-tag">RECOMMENDED</div>
+            <div class="pricing-header">
+              <h3>Weekly Plan</h3>
+              <p>Continuous cleanliness and fresh turf all year</p>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">19</span>
+                <span class="pricing-period">/visit</span>
+              </div>
+            </div>
+            <div class="pricing-features-list">
+              <div class="feature-item"><span>✓ Full lawn &amp; perimeter sweep every 7 days</span></div>
+              <div class="feature-item"><span>✓ Disinfected footwear and tools</span></div>
+              <div class="feature-item"><span>✓ Latch verification photo notification</span></div>
+              <div class="feature-item"><span>✓ Deck, patio &amp; fence line checked</span></div>
+              <div class="feature-item"><span>✓ 100% Satisfaction guarantee</span></div>
+            </div>
+            <button type="button" class="btn btn-outline-white" style="background:#ffffff; color:#243B2B; border-color:#ffffff; font-weight:700;" data-trigger-booking data-service-name="Weekly Cleanup">Select Weekly</button>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>One-Time Refresh</h3>
+              <p>Instant relief for heavy yard buildup</p>
+              <div class="pricing-price-wrap">
+                <span class="pricing-currency">$</span>
+                <span class="pricing-amount">69</span>
+                <span class="pricing-period">flat rate</span>
+              </div>
+            </div>
+            <div class="pricing-features-list">
+              <div class="feature-item"><span>✓ Intensive multi-pass grid clean</span></div>
+              <div class="feature-item"><span>✓ Clears up to 3 months accumulation</span></div>
+              <div class="feature-item"><span>✓ Flowerbeds &amp; leaf piles swept</span></div>
+              <div class="feature-item"><span>✓ Complete waste haul-away</span></div>
+            </div>
+            <button type="button" class="btn btn-secondary" data-trigger-booking data-service-name="One-Time Yard Cleanup">Select One-Time</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: COMMERCIAL & HOA SOLUTIONS -->
+    <section class="section bg-white" id="commercial">
+      <div class="container split-content-grid">
+        <div>
+          <span class="badge">COMMUNITY &amp; BUSINESS</span>
+          <h2>HOA &amp; Commercial Dog Waste Management</h2>
+          <p class="lead">
+            Unscooped pet waste is the #1 complaint in multi-family properties and homeowner associations. Pawvia provides complete end-to-end pet station management.
+          </p>
+          <div class="reasons-list">
+            <div class="reason-item">
+              <div class="reason-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <div class="reason-content">
+                <h4>Commercial Station Installation</h4>
+                <p>We supply, mount, and maintain durable aluminum dog waste stations with heavy-duty bag roll dispensers and odor-controlled receptacles.</p>
+              </div>
+            </div>
+            <div class="reason-item">
+              <div class="reason-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="reason-content">
+                <h4>Scheduled Bag Refilling &amp; Can Emptying</h4>
+                <p>Weekly or twice-weekly maintenance ensures your community stations never overflow with waste or run empty on clean dog bags.</p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 28px;">
+            <a href="contact.html" class="btn btn-primary">Request Commercial HOA Proposal</a>
+          </div>
+        </div>
+
+        <div class="split-visual-card">
+          <img src="assets/waste-station-hoa.jpg" alt="Commercial outdoor dog waste station with bag dispenser and trash bin in community park">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5A: ODOR NEUTRALIZING & PET-SAFE BOTANICAL SPRAY -->
+    <section class="section bg-soft" id="botanical-spray">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-dark">ORGANIC ODOR DEFENSE</span>
+          <h2>Hospital-Grade Clean, 100% Lick-Safe for Pups</h2>
+          <p>Eliminate stubborn ammonia smells and biological bacteria on grass, artificial turf, gravel runs, and concrete patios with our signature botanical wash.</p>
+        </div>
+
+        <div class="lawn-health-grid">
+          <div class="lawn-health-card">
+            <span class="health-score-badge">PLANT-BASED FORMULA</span>
+            <div class="health-metric-val">0%</div>
+            <h3 style="margin-bottom: 10px;">Harsh Chemicals or Bleach</h3>
+            <p>Our enzyme mist uses active bio-catalysts derived from plant extracts. No corrosive chlorine or synthetic perfumes that irritate dog paws, noses, or skin.</p>
+          </div>
+
+          <div class="lawn-health-card">
+            <span class="health-score-badge">RAPID BREAKDOWN</span>
+            <div class="health-metric-val">15 Min</div>
+            <h3 style="margin-bottom: 10px;">Fast Paws-On-Grass Drying Time</h3>
+            <p>Ready for play immediately after absorption. Your dogs can race across the lawn, roll in the grass, and chew their favorite ball safely 15 minutes after technician departure.</p>
+          </div>
+
+          <div class="lawn-health-card">
+            <span class="health-score-badge">ODOR MOLECULE DIGESTION</span>
+            <div class="health-metric-val">99.8%</div>
+            <h3 style="margin-bottom: 10px;">Ammonia Elimination Rate</h3>
+            <p>Instead of temporarily masking bad smells like artificial sprays, natural enzymes digest uric acid crystals and fecal bacteria at the molecular level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5B: HOW IT WORKS — MODERN PROCESS FLOW REDESIGN -->
+    <section class="section process-flow-section" id="welcome-checklist">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="process-flow-header">
+          <div class="process-flow-header-left">
+            <span class="badge badge-dark">EASY ONBOARDING</span>
+            <h2 class="process-flow-title">Your First Cleanup<br><span class="text-highlight">in 4 Simple Steps</span></h2>
+          </div>
+          <div class="process-flow-header-right">
+            <p>No waiting around or taking time off work. We make your first and every cleanup completely effortless. Most customers book in under 2 minutes.</p>
+            <div class="process-flow-trust-bar">
+              <span class="process-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Book in 60 seconds</span>
+              <span class="process-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> No credit card needed</span>
+              <span class="process-trust-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> SMS updates every visit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process Steps — Modern Horizontal Timeline -->
+        <div class="process-flow-grid">
+
+          <!-- Connector Line (decorative) -->
+          <div class="process-connector-line" aria-hidden="true"></div>
+
+          <!-- Step 1 -->
+          <div class="process-step-card">
+            <div class="process-step-icon-wrap">
+              <div class="process-step-num">01</div>
+              <div class="process-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="process-step-body">
+              <div class="process-step-tag">Step 1</div>
+              <h3>Select Your Dog Count</h3>
+              <p>Pick your routine schedule online in under 60 seconds — no upfront credit card, no long-term contract lock-in required.</p>
+              <div class="process-step-detail">
+                <span>✓ Weekly, Bi-Weekly, or One-Time</span>
+                <span>✓ Adjustable anytime</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step-card">
+            <div class="process-step-icon-wrap">
+              <div class="process-step-num">02</div>
+              <div class="process-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="process-step-body">
+              <div class="process-step-tag">Step 2</div>
+              <h3>Provide Gate Instructions</h3>
+              <p>Share padlock combos, latch types, or side-gate details at checkout. Your tech arrives prepared to enter smoothly — no back-and-forth needed.</p>
+              <div class="process-step-detail">
+                <span>✓ Encrypted &amp; private</span>
+                <span>✓ Saved for recurring visits</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step-card">
+            <div class="process-step-icon-wrap">
+              <div class="process-step-num">03</div>
+              <div class="process-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                </svg>
+              </div>
+            </div>
+            <div class="process-step-body">
+              <div class="process-step-tag">Step 3</div>
+              <h3>Arrival &amp; Grid Sweep</h3>
+              <p>You receive an automated SMS the moment your technician arrives. Our trained crew conducts a precision double-pass grid sweep of your entire yard.</p>
+              <div class="process-step-detail">
+                <span>✓ Real-time SMS notification</span>
+                <span>✓ Double-pass precision sweep</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 — Featured/Final -->
+          <div class="process-step-card process-step-final">
+            <div class="process-step-icon-wrap">
+              <div class="process-step-num">04</div>
+              <div class="process-step-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="process-step-body">
+              <div class="process-step-tag">Step 4</div>
+              <h3>Photo Gate Confirmation</h3>
+              <p>Your tech bags all waste, latches the gate, and sends a geo-tagged photo confirming your yard is secured — every single visit, automatically.</p>
+              <div class="process-step-detail">
+                <span>✓ Geo-tagged photo proof</span>
+                <span>✓ Gate locked guarantee</span>
+              </div>
+            </div>
+            <div class="process-final-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align: -1px; margin-right: 4px;"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Done! Your yard is fresh</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA strip -->
+        <div class="process-flow-cta">
+          <p>Ready to experience a spotless yard without lifting a finger?</p>
+          <button type="button" class="btn btn-primary" data-trigger-booking>Book Your First Cleanup — From $19</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SECTION 6: CUSTOMER REVIEWS -->
+    <section class="section bg-light" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">HAPPY YARDS</span>
+          <h2>Real Feedback from Neighborhood Clients</h2>
+          <p>Honest reviews from families who traded their weekly scooping chore for effortless lawn enjoyment.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “I love how prompt and polite our technician Marcus is. He always texts before arrival, closes both latches on our security fence, and leaves our yard spotless. Worth every penny!”
+            </p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Jason K.">
+              <div class="author-info">
+                <h5>Jason K.</h5>
+                <p>2 Dogs (Labradors) • Weekly Client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “We have artificial turf and the smell in July was getting terrible. Their enzymatic deodorizer wash combined with weekly scoops completely solved the odor problem.”
+            </p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Amanda R.">
+              <div class="author-info">
+                <h5>Amanda R.</h5>
+                <p>Artificial Turf Yard • Bi-Weekly Client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “Our landlord was threatening pet fines because of the yard condition during winter. Pawvia did a one-time spring rescue and brought our deposit back into safety.”
+            </p>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Greg M.">
+              <div class="author-info">
+                <h5>Greg M.</h5>
+                <p>One-Time Deep Clean • Oak Hills</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FREQUENTLY ASKED QUESTIONS -->
+    <section class="section bg-white" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">FREQUENT QUESTIONS</span>
+          <h2>Got Questions? We Have Honest Answers.</h2>
+          <p>Everything you need to know about our schedules, safety protocols, and billing.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button type="button" class="faq-question-btn">
+              <span>Do I need to be home when you service my yard?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No! As long as our technician has unlocked gate access to your backyard and dogs are either friendly or resting comfortably indoors, you don't need to be home. We send you an arrival text and a timestamped gate photo when finished.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Can my dogs be in the yard while you scoop?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>If your dogs are friendly and enjoy greeting visitors, they are more than welcome outside! All our techs love dogs and know how to safely navigate around them. If your dog is territorial, nervous, or protective of gates, we kindly ask that they remain inside during the 15-minute service window.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>How do you prevent spreading parasites between yards?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Biosecurity is our top priority. Our technicians thoroughly spray and soak all scooper blades, buckets, and footwear soles with an EPA-registered, veterinary-grade disinfectant before driving between service addresses. This completely eliminates risk of transferring parvovirus, Giardia, or worms.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>What happens if it rains or snows?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We work in light rain and typical weather year-round! In the event of severe lightning, dangerous ice, or blizzards that conceal waste, we will reschedule your route day or clear accumulated waste on your next regular visit with zero extra surcharge.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question-btn">
+              <span>Are there contracts, cancellation fees, or startup costs?</span>
+              <span class="faq-icon-cross">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Never. We earn your business with every visit. You can pause service for vacations or cancel at any time directly through your customer dashboard or by giving us a quick call.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: STRONG BOOKING FINAL CALL TO ACTION -->
+    <section class="section-sm bg-white">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Take Back Your Yard This Weekend</h2>
+          <p>Get rid of pet waste without lifting a finger. Our verified route scooping technicians are ready to service your lawn.</p>
+          <div class="cta-buttons-wrap">
+            <button type="button" class="btn btn-secondary btn-lg" data-trigger-booking>
+              <span>Schedule Your First Scoop</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <a href="tel:8885557667" class="btn btn-outline-white btn-lg">Call (888) 555-POOP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor"
+                  opacity="0.7" />
+                <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor" />
+                <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor" />
+                <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor"
+                  opacity="0.7" />
+                <path
+                  d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title">Paw<span>via</span></span>
+              <span class="logo-tagline">Pet Waste Removal</span>
+            </div>
+          </a>
+          <p>
+            Your trustworthy, local dog waste removal specialists. Making backyards safe, hygienic, and fun for families
+            and pets with reliable scooping and sanitizing solutions.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.6 5H18V0h-3.8C10.6 0 9 1.583 9 4.615V8z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2 (Alternative)</a></li>
+            <li><a href="about.html">About Our Company</a></li>
+            <li><a href="services.html">Services &amp; Solutions</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="blog.html">Pet &amp; Lawn Blog</a></li>
+            <li><a href="coming-soon.html">Maintenance &amp; Roadmap</a></li>
+            <li><a href="404.html">404 Error Page</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#weekly">Weekly Pet Waste Scoop</a></li>
+            <li><a href="services.html#biweekly">Bi-Weekly Maintenance</a></li>
+            <li><a href="services.html#onetime">One-Time Yard Cleanup</a></li>
+            <li><a href="services.html#deodorizing">Turf Deodorizing Spray</a></li>
+            <li><a href="services.html#commercial">Commercial Dog Stations</a></li>
+            <li><a href="services.html#hoa">HOA &amp; Dog Park Cleanup</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Hours</h4>
+          <p style="margin-bottom: 12px;">
+            <strong>Service Hours:</strong><br>
+            Monday – Saturday: 7:00 AM – 6:00 PM<br>
+            Sunday: Emergency / On-Call Only
+          </p>
+          <p>
+            <strong>Headquarters:</strong><br>
+            420 Clean Lawn Way, Suite 100<br>
+            Springfield, Metro Area
+          </p>
+          <p style="margin-top: 14px;">
+            <a href="tel:8885557667" class="footer-phone-link" aria-label="Call Toll-Free (888) 555-POOP">
+              <span class="footer-phone-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z" />
+                </svg>
+              </span>
+              <span>(888) 555-POOP</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pawvia LLC. All rights reserved. Clean yards, happy dogs, zero hassle.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Gate Guarantee Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AUTH MODAL -->
+  <div class="modal-overlay" id="authModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3>Customer Access</h3>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab-btn active" id="authTabLogin">Sign In</button>
+          <button type="button" class="auth-tab-btn" id="authTabSignup">Create Account</button>
+        </div>
+        <form id="authFormLogin">
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" class="form-input" placeholder="sarah.jenkins@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 12px;">Sign In to Dashboard</button>
+          <button type="button" class="btn btn-secondary btn-sm" id="demoFillBtn" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Quick Demo Fill</span>
+          </button>
+        </form>
+        <form id="authFormSignup" style="display: none;">
+          <div class="form-group">
+            <label class="form-label" for="signupName">Full Name</label>
+            <input type="text" id="signupName" class="form-input" placeholder="Jane Doe" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" class="form-input" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD MODAL -->
+  <div class="modal-overlay" id="dashboardModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-dialog-large">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="logo-icon" style="width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 64 64" fill="currentColor">
+              <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" opacity="0.7" />
+              <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" />
+              <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" />
+              <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" opacity="0.7" />
+              <path d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z" />
+            </svg>
+          </div>
+          <h3 id="dashWelcomeTitle">Welcome, Sarah Jenkins!</h3>
+        </div>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 24px;">
+        <div class="dashboard-grid">
+          <div class="dashboard-sidebar">
+            <button type="button" class="dash-nav-btn active" data-dash-target="paneVisits">Cleanup Schedule</button>
+            <button type="button" class="dash-nav-btn" data-dash-target="panePlan">My Plan Details</button>
+            <button type="button" class="dash-nav-btn" data-dash-target="paneAddress">Service Address &amp; Gate</button>
+            <button type="button" class="dash-nav-btn" data-dash-target="paneHistory">Scoop History</button>
+            <button type="button" class="dash-nav-btn" data-dash-target="paneBilling">Billing &amp; Receipts</button>
+          </div>
+          <div class="dashboard-content">
+            <div class="dash-content-pane active" id="paneVisits">
+              <h4 style="margin-bottom:14px;">Upcoming Route Schedule</h4>
+              <table class="table-custom">
+                <thead><tr><th>Date</th><th>Arrival Window</th><th>Field Tech</th><th>Status</th></tr></thead>
+                <tbody id="dashUpcomingTableBody"></tbody>
+              </table>
+            </div>
+            <div class="dash-content-pane" id="panePlan">
+              <div style="background:var(--color-grey-50); padding:20px; border-radius:var(--radius-md);">
+                <h4 id="dashPlanName">Weekly Service Plan</h4>
+                <p id="dashPlanFreq">Weekly</p>
+                <p id="dashPlanRate">$34 / visit</p>
+              </div>
+            </div>
+            <div class="dash-content-pane" id="paneAddress">
+              <form id="dashAddressForm">
+                <div class="form-group"><label class="form-label" for="dashInputAddress">Home Address</label><input type="text" id="dashInputAddress" class="form-input"></div>
+                <div class="form-group"><label class="form-label" for="dashInputGate">Gate Code / Notes</label><input type="text" id="dashInputGate" class="form-input"></div>
+                <div class="form-group"><label class="form-label" for="dashInputPhone">Phone Number</label><input type="tel" id="dashInputPhone" class="form-input"></div>
+                <button type="submit" class="btn btn-primary btn-sm">Save Details</button>
+              </form>
+            </div>
+            <div class="dash-content-pane" id="paneHistory">
+              <table class="table-custom">
+                <thead><tr><th>Date</th><th>Technician</th><th>Notes</th><th>Status</th></tr></thead>
+                <tbody id="dashHistoryTableBody"></tbody>
+              </table>
+            </div>
+            <div class="dash-content-pane" id="paneBilling">
+              <table class="table-custom">
+                <thead><tr><th>Invoice ID</th><th>Date</th><th>Method</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody id="dashPaymentTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIVERSAL BOOKING MODAL -->
+  <div class="modal-overlay" id="bookingModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="bookingModalTitle">Book Your Pet Waste Cleanup</h3>
+        <button type="button" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="unifiedBookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bookServiceSelect">Service Frequency</label>
+              <select id="bookServiceSelect" class="form-select">
+                <option value="weekly">Weekly Service ($19 base)</option>
+                <option value="biweekly">Bi-Weekly ($29 base)</option>
+                <option value="onetime">One-Time Cleanup ($69 base)</option>
+                <option value="commercial">Commercial / HOA</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bookDogsSelect">Number of Dogs</label>
+              <select id="bookDogsSelect" class="form-select">
+                <option value="1">1 Dog (Included)</option>
+                <option value="2">2 Dogs (+$6)</option>
+                <option value="3">3 Dogs (+$12)</option>
+                <option value="4">4+ Dogs (+$18)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bookYardSelect">Yard Size</label>
+              <select id="bookYardSelect" class="form-select">
+                <option value="standard">Standard Lot (Up to 1/4 Acre)</option>
+                <option value="large">Medium Yard (1/4 - 1/2 Acre)</option>
+                <option value="acreage">Large Acreage (1/2+ Acre)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bookDate">Start Date</label>
+              <input type="date" id="bookDate" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookName">Full Name</label>
+            <input type="text" id="bookName" class="form-input" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bookEmail">Email</label>
+              <input type="email" id="bookEmail" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bookPhone">Phone</label>
+              <input type="tel" id="bookPhone" class="form-input" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="bookAddress">Service Address</label>
+            <input type="text" id="bookAddress" class="form-input" required>
+          </div>
+          <div style="background:var(--color-grey-50); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:16px; display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <div>
+              <div style="font-size:0.85rem; font-weight:700; color:var(--color-grey-400);">Estimated Rate</div>
+              <div style="font-size:0.8rem; color:var(--color-charcoal-500);">No card required upfront</div>
+            </div>
+            <div id="bookEstimateDisplay" style="font-size:1.8rem; font-weight:900; color:var(--color-black);">$19/visit</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm &amp; Schedule Cleanup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/theme-rtl.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

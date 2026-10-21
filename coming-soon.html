@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon & System Maintenance | Pawvia Pet Waste Removal</title>
+  <meta name="description"
+    content="Pawvia route systems and dispatch engine are undergoing scheduled performance upgrades. Our mobile field technicians remain on active yard service schedules.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/special-pages.css">
+  <script src="js/theme-rtl.js"></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-announcement">
+        <span class="topbar-badge">SYSTEM STATUS</span>
+        <span>Scheduled platform optimization in progress • Field scoopers active on normal route schedule</span>
+      </div>
+      <div class="topbar-contact">
+        <a href="tel:8885557667">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          (888) 555-POOP
+        </a>
+        <a href="mailto:support@pawvia.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          support@pawvia.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Pawvia Homepage">
+        <div class="logo-icon">
+          <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor"
+              opacity="0.7" />
+            <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor" />
+            <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor" />
+            <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor" opacity="0.7" />
+            <path
+              d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z"
+              fill="currentColor" />
+          </svg>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">Paw<span>via</span></span>
+          <span class="logo-tagline">Pet Waste Removal</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-item-dropdown">
+          <button type="button" class="nav-link nav-dropdown-btn" id="navDashDropdownBtn" aria-expanded="false" aria-haspopup="true">
+            <span>Dashboard</span>
+            <svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="nav-dropdown-menu" id="navDashDropdownMenu" role="menu" aria-label="Dashboard Options">
+            <a href="admin-dashboard.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div class="nav-dropdown-text">
+                <span class="nav-dropdown-title">Admin Dashboard</span>
+                <span class="nav-dropdown-desc">Management & Ops</span>
+              </div>
+            </a>
+            <a href="dashboard.html" class="nav-dropdown-item" role="menuitem">
+              <div class="nav-dropdown-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+              </div>
+              <div class="nav-dropdown-text">
+                <span class="nav-dropdown-title">User Dashboard</span>
+                <span class="nav-dropdown-desc">Customer Portal</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <!-- User Account Menu (Profile Icon Only) -->
+        <div class="user-menu-wrapper">
+          <button type="button" class="btn-user-account header-icon-btn" id="userMenuBtn" aria-label="User Account Menu"
+            aria-expanded="false" title="Account Menu">
+            <div class="user-avatar-placeholder">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+          </button>
+
+          <div class="user-dropdown" id="userDropdown" role="menu" aria-label="Account Navigation">
+            <div class="dropdown-header-status">
+              <div class="dropdown-user-name" id="dropdownUserName">Alex Morgan</div>
+              <div class="dropdown-user-sub" id="dropdownUserStatus"><span class="status-dot"></span> Active Customer
+              </div>
+            </div>
+            <a href="dashboard.html" class="dropdown-item" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+              <span>User Dashboard</span>
+            </a>
+            <a href="admin-dashboard.html" class="dropdown-item" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <span>Admin Dashboard</span>
+            </a>
+            <a href="login.html" class="dropdown-item" id="menuItemLogin" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                <polyline points="10 17 15 12 10 7" />
+                <line x1="15" y1="12" x2="3" y2="12" />
+              </svg>
+              <span>Login</span>
+            </a>
+            <a href="signup.html" class="dropdown-item" id="menuItemSignup" role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="8.5" cy="7" r="4" />
+                <line x1="20" y1="8" x2="20" y2="14" />
+                <line x1="23" y1="11" x2="17" y2="11" />
+              </svg>
+              <span>Sign Up</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-item-danger" id="menuItemLogout" data-auth-action="logout"
+              role="menuitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+              </svg>
+              <span>Sign Out</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" class="header-icon-btn" id="themeToggleBtn" data-theme-toggle
+          aria-label="Switch to Dark Mode" aria-pressed="false" title="Toggle Dark/Light Theme">
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <!-- RTL Toggle Button -->
+        <button type="button" class="header-icon-btn" id="rtlToggleBtn" data-rtl-toggle
+          aria-label="Switch to Right-to-Left Layout" aria-pressed="false" title="Toggle RTL/LTR Layout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="17 8 21 12 17 16" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+            <polyline points="7 16 3 12 7 8" />
+            <line x1="3" y1="12" x2="10" y2="12" />
+          </svg>
+        </button>
+
+        <!-- CTA Button in Last Position -->
+        <button type="button" class="btn btn-primary btn-book-now" data-trigger-booking>Book Now</button>
+
+        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-user-card" id="mobileUserCard">
+      <div class="mobile-user-header">
+        <div class="mobile-user-avatar" id="mobileUserAvatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </div>
+        <div class="mobile-user-info">
+          <div class="mobile-user-name" id="mobileUserName">Alex Morgan</div>
+          <div class="mobile-user-sub" id="mobileUserStatus">
+            <span class="status-dot"></span> Active Customer
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-user-actions">
+        <a href="dashboard.html" class="mobile-dash-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="3" width="7" height="7" rx="1.5" />
+            <rect x="14" y="14" width="7" height="7" rx="1.5" />
+            <rect x="3" y="14" width="7" height="7" rx="1.5" />
+          </svg>
+          <span>User Dashboard</span>
+        </a>
+        <a href="admin-dashboard.html" class="mobile-dash-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+          </svg>
+          <span>Admin Portal</span>
+        </a>
+      </div>
+
+      <div class="mobile-auth-row" id="mobileAuthRow">
+        <a href="login.html" class="btn btn-outline mobile-auth-btn" id="mobileLoginBtn">Login</a>
+        <a href="signup.html" class="btn btn-primary mobile-auth-btn" id="mobileSignupBtn">Sign Up</a>
+        <button type="button" class="btn btn-outline mobile-auth-btn" id="mobileLogoutBtn" data-auth-action="logout"
+          style="display: none;">Sign Out</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="home-2.html" class="mobile-nav-link">Home 2</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing</a>
+      <a href="blog.html" class="mobile-nav-link">Blog</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <div class="mobile-nav-dropdown">
+        <button type="button" class="mobile-nav-dropdown-btn" aria-expanded="false">
+          <span>Dashboard</span>
+          <svg class="mobile-dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-nav-dropdown-menu">
+          <a href="admin-dashboard.html" class="mobile-dropdown-item">
+            <div class="nav-dropdown-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <div class="nav-dropdown-text">
+              <span class="nav-dropdown-title">Admin Dashboard</span>
+              <span class="nav-dropdown-desc">Management & Ops</span>
+            </div>
+          </a>
+          <a href="dashboard.html" class="mobile-dropdown-item">
+            <div class="nav-dropdown-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                <rect x="3" y="14" width="7" height="7" rx="1.5" />
+              </svg>
+            </div>
+            <div class="nav-dropdown-text">
+              <span class="nav-dropdown-title">User Dashboard</span>
+              <span class="nav-dropdown-desc">Customer Portal</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MAIN COMING SOON / MAINTENANCE CONTENT -->
+  <main class="special-page-wrapper" role="main">
+    <div class="special-container">
+
+      <!-- Interactive Mode Switcher -->
+      <div class="mode-toggle-bar">
+        <button type="button" class="mode-toggle-btn active" id="btnModeMaintenance">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+          </svg>
+          <span>System Maintenance</span>
+        </button>
+        <button type="button" class="mode-toggle-btn" id="btnModeComingSoon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span>Coming Soon 2.0</span>
+        </button>
+      </div>
+
+      <!-- Live Status Badge -->
+      <div>
+        <div class="special-badge" id="specialStatusBadge">
+          <span class="pulse-dot"></span>
+          <span id="statusBadgeText">ALL FIELD ROUTES ACTIVE TODAY • PLATFORM TUNING</span>
+        </div>
+      </div>
+
+      <!-- Main Headline & Description -->
+      <h1 class="special-title" id="pageHeadline">Paws in Progress! Yard Tech Upgrades Underway.</h1>
+      <p class="special-subtitle" id="pageSubtitle">
+        We are fine-tuning our automated dispatch algorithms and biosecurity audit systems. Our mobile technicians are
+        still actively scooping yards on schedule.
+      </p>
+
+      <!-- Live Countdown Clock -->
+      <div class="countdown-container" aria-label="Estimated Launch Countdown">
+        <div class="countdown-box">
+          <span class="countdown-number" id="timerDays">04</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="timerHours">16</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="timerMinutes">38</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-box">
+          <span class="countdown-number" id="timerSeconds">42</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+
+      <!-- Upcoming Feature Cards -->
+      <div class="upcoming-features-grid">
+        <div class="feature-preview-card">
+          <div class="feature-preview-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+            </svg>
+          </div>
+          <h3>Live GPS Fleet Telemetry</h3>
+          <p>Real-time truck arrival radar and 5-minute technician proximity alerts right to your smartphone.</p>
+        </div>
+
+        <div class="feature-preview-card">
+          <div class="feature-preview-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+          <h3>Smart Gate Lock 2.0</h3>
+          <p>Two-step timestamped video latch confirmations ensuring your furry family members stay 100% secure.</p>
+        </div>
+
+        <div class="feature-preview-card">
+          <div class="feature-preview-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Eco Bio-Shield Sanitizing</h3>
+          <p>Enhanced organic enzyme misting that completely eradicates canine parvovirus, giardia, and turf odor.</p>
+        </div>
+      </div>
+
+      <!-- Email Notification Form -->
+      <div class="notify-subscribe-box">
+        <h3>Get Instant Launch Notification</h3>
+        <p>Enter your email below to be the first notified when our new customer telemetry portal goes fully live.</p>
+        <form class="notify-form" id="notifyForm">
+          <input type="email" class="notify-input" id="notifyEmailInput" placeholder="your.name@example.com" required>
+          <button type="submit" class="btn btn-primary">
+            <span>Notify Me</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </button>
+        </form>
+        <div class="notify-success-msg" id="notifySuccessMsg">
+          ✓ Thank you! You will receive an instant priority alert the moment systems relaunch.
+        </div>
+      </div>
+
+      <!-- Urgent Dispatch Care Support -->
+      <div class="urgent-support-bar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        <span>Need emergency gate code updates or same-day route changes? Call toll-free: <a href="tel:8885557667">(888)
+            555-POOP</a></span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor"
+                  opacity="0.7" />
+                <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor" />
+                <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor" />
+                <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor"
+                  opacity="0.7" />
+                <path
+                  d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z"
+                  fill="currentColor" />
+              </svg>
+            </div>
+            <div class="logo-text-group">
+              <span class="logo-title">Paw<span>via</span></span>
+              <span class="logo-tagline">Pet Waste Removal</span>
+            </div>
+          </a>
+          <p>
+            Your trustworthy, local dog waste removal specialists. Making backyards safe, hygienic, and fun for families
+            and pets with reliable scooping and sanitizing solutions.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.6 5H18V0h-3.8C10.6 0 9 1.583 9 4.615V8z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2 (Alternative)</a></li>
+            <li><a href="about.html">About Our Company</a></li>
+            <li><a href="services.html">Services &amp; Solutions</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="blog.html">Pet &amp; Lawn Blog</a></li>
+            <li><a href="coming-soon.html">Maintenance &amp; Roadmap</a></li>
+            <li><a href="404.html">404 Error Page</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#weekly">Weekly Pet Waste Scoop</a></li>
+            <li><a href="services.html#biweekly">Bi-Weekly Maintenance</a></li>
+            <li><a href="services.html#onetime">One-Time Yard Cleanup</a></li>
+            <li><a href="services.html#deodorizing">Turf Deodorizing Spray</a></li>
+            <li><a href="services.html#commercial">Commercial Dog Stations</a></li>
+            <li><a href="services.html#hoa">HOA &amp; Dog Park Cleanup</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Hours</h4>
+          <p style="margin-bottom: 12px;">
+            <strong>Service Hours:</strong><br>
+            Monday – Saturday: 7:00 AM – 6:00 PM<br>
+            Sunday: Emergency / On-Call Only
+          </p>
+          <p>
+            <strong>Headquarters:</strong><br>
+            420 Clean Lawn Way, Suite 100<br>
+            Springfield, Metro Area
+          </p>
+          <p style="margin-top: 14px;">
+            <a href="tel:8885557667" class="footer-phone-link" aria-label="Call Toll-Free (888) 555-POOP">
+              <span class="footer-phone-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z" />
+                </svg>
+              </span>
+              <span>(888) 555-POOP</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pawvia LLC. All rights reserved. Clean yards, happy dogs, zero hassle.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Gate Guarantee Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme-rtl.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Live Countdown Timer
+    (function initCountdown() {
+      // Set target countdown to 4 days, 16 hours from now
+      var targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 4);
+      targetDate.setHours(targetDate.getHours() + 16);
+
+      function updateClock() {
+        var now = new Date().getTime();
+        var diff = targetDate.getTime() - now;
+
+        if (diff <= 0) {
+          diff = 0;
+        }
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        var elD = document.getElementById('timerDays');
+        var elH = document.getElementById('timerHours');
+        var elM = document.getElementById('timerMinutes');
+        var elS = document.getElementById('timerSeconds');
+
+        if (elD) elD.textContent = String(days).padStart(2, '0');
+        if (elH) elH.textContent = String(hours).padStart(2, '0');
+        if (elM) elM.textContent = String(minutes).padStart(2, '0');
+        if (elS) elS.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    })();
+
+    // Mode Switcher (Maintenance Mode vs. Coming Soon 2.0)
+    (function initModeSwitcher() {
+      var btnMaint = document.getElementById('btnModeMaintenance');
+      var btnComing = document.getElementById('btnModeComingSoon');
+      var headline = document.getElementById('pageHeadline');
+      var subtitle = document.getElementById('pageSubtitle');
+      var badgeText = document.getElementById('statusBadgeText');
+
+      if (btnMaint && btnComing) {
+        btnMaint.addEventListener('click', function () {
+          btnMaint.classList.add('active');
+          btnComing.classList.remove('active');
+          if (headline) headline.textContent = "Paws in Progress! Yard Tech Upgrades Underway.";
+          if (subtitle) subtitle.textContent = "We are fine-tuning our automated dispatch algorithms and biosecurity audit systems. Our mobile technicians are still actively scooping yards on schedule.";
+          if (badgeText) badgeText.textContent = "ALL FIELD ROUTES ACTIVE TODAY • PLATFORM TUNING";
+        });
+
+        btnComing.addEventListener('click', function () {
+          btnComing.classList.add('active');
+          btnMaint.classList.remove('active');
+          if (headline) headline.textContent = "Something Fresh is Sprouting! Pawvia 2.0 Coming Soon.";
+          if (subtitle) subtitle.textContent = "We are preparing a major release of the next-generation yard management platform featuring live GPS tech tracking, instant gate video confirmation, and lawn health bio-audits.";
+          if (badgeText) badgeText.textContent = "NEW PLATFORM LAUNCH • SNEAK PEEK & EARLY ACCESS";
+        });
+      }
+    })();
+
+    // Email Notification Form
+    (function initNotifyForm() {
+      var form = document.getElementById('notifyForm');
+      var input = document.getElementById('notifyEmailInput');
+      var successMsg = document.getElementById('notifySuccessMsg');
+
+      if (form && input && successMsg) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var email = input.value.trim();
+          if (email) {
+            try {
+              localStorage.setItem('pawvia_notify_email', email);
+            } catch (err) { }
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+
+</html>

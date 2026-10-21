@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Operations Portal | Pawvia Pet Waste Removal</title>
+  <meta name="description" content="Pawvia Operations & Dispatch Portal for authorized field managers to monitor routes, assign scoopers, track revenue, and manage customer yard subscriptions.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="js/theme-rtl.js"></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+
+<body class="dash-page-body" id="adminDashboardRoot">
+
+  <div class="dash-layout">
+
+    <!-- ADMIN SIDEBAR -->
+    <aside class="dash-sidebar" id="adminSidebar" aria-label="Admin Operations Navigation">
+      <div class="dash-sidebar-header">
+        <a href="index.html" class="dash-brand" aria-label="Pawvia Homepage">
+          <div class="dash-brand-icon">
+            <svg width="24" height="24" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="currentColor" opacity="0.7" />
+              <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="currentColor" />
+              <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="currentColor" />
+              <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="currentColor" opacity="0.7" />
+              <path d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z" fill="currentColor" />
+            </svg>
+          </div>
+          <div class="dash-brand-text">
+            <span class="dash-brand-name">Paw<span>via</span></span>
+            <span class="dash-brand-tagline">Operations Admin</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Admin Profile Mini Card -->
+      <div class="dash-user-card">
+        <div class="dash-user-avatar" style="background: linear-gradient(135deg, #1E3725 0%, #2D4E35 100%); color: #8FD89F;">OP</div>
+        <div class="dash-user-meta">
+          <h4>Operations Admin</h4>
+          <p><span class="admin-badge">Field Dispatcher</span></p>
+        </div>
+      </div>
+
+      <!-- Sidebar Navigation Menu -->
+      <nav class="dash-nav" aria-label="Admin Sections">
+        <span class="dash-nav-section-title">Operations</span>
+
+        <a href="#admin-overview" class="dash-nav-link admin-nav-link active" data-admin-tab="admin-overview">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          <span>Operations Overview</span>
+        </a>
+
+        <a href="#admin-dispatch" class="dash-nav-link admin-nav-link" data-admin-tab="admin-dispatch">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Dispatch &amp; Bookings</span>
+          <span class="dash-nav-badge">4</span>
+        </a>
+
+        <a href="#admin-customers" class="dash-nav-link admin-nav-link" data-admin-tab="admin-customers">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Customer Accounts</span>
+          <span class="dash-nav-badge">142</span>
+        </a>
+
+        <a href="#admin-routes" class="dash-nav-link admin-nav-link" data-admin-tab="admin-routes">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          <span>Routes &amp; Service Zones</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer -->
+      <div class="dash-sidebar-footer">
+        <a href="dashboard.html" class="dash-sidebar-cta" style="background: var(--color-leaf-green);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Switch to Customer View</span>
+        </a>
+        <a href="index.html" class="dash-sidebar-cta" style="background: var(--color-forest-green);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Back to Main Website</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="dash-sidebar-overlay" id="adminSidebarOverlay" aria-hidden="true"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="dash-main-wrap">
+
+      <!-- TOPBAR -->
+      <header class="dash-topbar" role="banner">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-mobile-toggle" id="adminSidebarToggle" aria-label="Open Sidebar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          <div class="dash-breadcrumbs">
+            <a href="index.html" class="dash-crumb-home">Pawvia</a>
+            <span class="dash-crumb-sep">/</span>
+            <span class="admin-badge dash-crumb-badge">Admin Portal</span>
+            <span class="dash-crumb-sep">/</span>
+            <span class="dash-breadcrumbs-current" id="adminBreadcrumbCurrent">Operations Overview</span>
+          </div>
+        </div>
+
+        <div class="dash-topbar-right">
+          <!-- RTL Toggle Button -->
+          <button type="button" class="dash-icon-btn" id="rtlToggleBtn" data-rtl-toggle aria-label="Toggle RTL Layout" title="Toggle RTL">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 8 21 12 17 16"/><line x1="21" y1="12" x2="9" y2="12"/><polyline points="7 16 3 12 7 8"/><line x1="3" y1="12" x2="10" y2="12"/></svg>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button type="button" class="dash-icon-btn" id="themeToggleBtn" data-theme-toggle aria-label="Toggle Theme" title="Toggle Theme">
+            <svg class="icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+
+          <!-- User Account Dropdown Trigger (Profile Icon Only) -->
+          <div class="user-menu-wrapper">
+            <button type="button" class="btn-user-account" id="userMenuBtn" aria-label="User Account Menu" aria-expanded="false" title="Account Menu">
+              <div class="user-avatar-placeholder" style="background: #27402F; color: #8FD89F;">OP</div>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div class="user-dropdown" id="userDropdown" role="menu" aria-label="Account Navigation">
+              <div class="dropdown-header-status">
+                <div class="dropdown-user-name">Operations Admin</div>
+                <div class="dropdown-user-sub"><span class="status-dot"></span> Operations Portal</div>
+              </div>
+              <a href="dashboard.html" class="dropdown-item" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+                <span>User Dashboard</span>
+              </a>
+              <a href="admin-dashboard.html" class="dropdown-item" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <span>Admin Dashboard</span>
+              </a>
+              <a href="login.html" class="dropdown-item" id="menuItemLogin" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                  <polyline points="10 17 15 12 10 7" />
+                  <line x1="15" y1="12" x2="3" y2="12" />
+                </svg>
+                <span>Login</span>
+              </a>
+              <a href="signup.html" class="dropdown-item" id="menuItemSignup" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="8.5" cy="7" r="4" />
+                  <line x1="20" y1="8" x2="20" y2="14" />
+                  <line x1="23" y1="11" x2="17" y2="11" />
+                </svg>
+                <span>Sign Up</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="index.html" class="dropdown-item dropdown-item-danger" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                  <polyline points="16 17 21 12 16 7" />
+                  <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+                <span>Sign Out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <main class="dash-content" role="main">
+
+        <!-- TAB 1: OPERATIONS OVERVIEW -->
+        <section class="admin-tab-section" id="tab-admin-overview">
+          <!-- ADMIN STATS OVERVIEW CARDS -->
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Active Customers</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="adminKpiCustomers">142</div>
+              <div class="dash-stat-meta">
+                <span class="dash-stat-pill dash-pill-green">+14 this month</span>
+                <span>Across 5 local zones</span>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Weekly Scoops</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="adminKpiVisits">385</div>
+              <div class="dash-stat-meta">
+                <span class="dash-stat-pill dash-pill-blue">Active Schedule</span>
+                <span>3 active field scoopers</span>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Monthly Revenue</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="adminKpiMrr">$18,496</div>
+              <div class="dash-stat-meta">
+                <span class="dash-stat-pill dash-pill-green">98.2% Auto-Pay</span>
+                <span>Recurring monthly MRR</span>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-header">
+                <span class="dash-stat-title">Biosecurity Gate Check</span>
+                <div class="dash-stat-icon-wrap">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+              </div>
+              <div class="dash-stat-value" id="adminKpiBiosecurity">100%</div>
+              <div class="dash-stat-meta">
+                <span class="dash-stat-pill dash-pill-green">Verified</span>
+                <span>Timestamped photo compliance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OPERATIONS OVERVIEW SUMMARY CARD -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Daily Field Operations &amp; Territory Overview</h3>
+                <p class="dash-card-subtitle">Real-time status of service route completion, field scooper assignments, and biosecurity sanitation protocols.</p>
+              </div>
+              <div class="dash-card-header-right">
+                <button type="button" class="btn-dash-sm" onclick="switchAdminTab('admin-dispatch')">View Live Dispatch →</button>
+              </div>
+            </div>
+
+            <div class="admin-overview-summary-grid">
+              <div class="admin-summary-box">
+                <div class="summary-box-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 0.95rem; font-weight: 700;">Today's Dispatch Status</h4>
+                  <p style="margin: 0; font-size: 0.82rem; color: var(--color-forest-muted);">3 active field technicians on schedule across 5 local zones. 4 visits pending verification.</p>
+                </div>
+              </div>
+
+              <div class="admin-summary-box">
+                <div class="summary-box-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 0.95rem; font-weight: 700;">Biosecurity Standard</h4>
+                  <p style="margin: 0; font-size: 0.82rem; color: var(--color-forest-muted);">100% two-step photo gate latch verification. Sanitizer refill checkpoints passed.</p>
+                </div>
+              </div>
+
+              <div class="admin-summary-box">
+                <div class="summary-box-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <h4 style="margin: 0 0 4px; font-size: 0.95rem; font-weight: 700;">Customer Retention</h4>
+                  <p style="margin: 0; font-size: 0.82rem; color: var(--color-forest-muted);">142 subscribed households with 98.2% automated monthly auto-renewal.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+              <button type="button" class="btn-dash-sm" style="padding: 9px 16px; font-weight: 700;" onclick="switchAdminTab('admin-dispatch')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Manage Bookings &amp; Dispatch
+              </button>
+              <button type="button" class="btn-dash-sm" style="padding: 9px 16px; font-weight: 700;" onclick="switchAdminTab('admin-customers')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                View Customer Directory
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: DISPATCH & BOOKINGS MANAGEMENT -->
+        <section class="admin-tab-section" id="tab-admin-dispatch" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Live Dispatch Board &amp; Field Routing</h3>
+                <p class="dash-card-subtitle">Real-time cleanup status, gate lock verification, and scooper assignments.</p>
+              </div>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Dispatch Board">
+                <thead>
+                  <tr>
+                    <th>Visit ID</th>
+                    <th>Customer &amp; Address</th>
+                    <th>Date &amp; Window</th>
+                    <th>Assigned Scooper</th>
+                    <th>Status</th>
+                    <th>Operations</th>
+                  </tr>
+                </thead>
+                <tbody id="adminBookingsTableBody">
+                  <!-- Populated dynamically by js/dashboard.js -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: CUSTOMERS DIRECTORY -->
+        <section class="admin-tab-section" id="tab-admin-customers" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Customer Accounts Directory</h3>
+                <p class="dash-card-subtitle">View subscribed households, registered dogs, and yard service statuses.</p>
+              </div>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Customer Directory">
+                <thead>
+                  <tr>
+                    <th>Customer ID</th>
+                    <th>Name &amp; Email</th>
+                    <th>Phone</th>
+                    <th>Plan Tier</th>
+                    <th>Dogs</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="adminCustomersTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB: ROUTES & SERVICE AREAS -->
+        <section class="admin-tab-section" id="tab-admin-routes" style="display: none;">
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div class="dash-card-header-left">
+                <h3 class="dash-card-title">Local Service Zones &amp; Scooper Capacity</h3>
+                <p class="dash-card-subtitle">Cluster route optimization to reduce driving transit and maintain 100% on-time visits.</p>
+              </div>
+            </div>
+
+            <div class="dash-table-wrapper">
+              <table class="dash-table" aria-label="Service Routes">
+                <thead>
+                  <tr>
+                    <th>Zone Code</th>
+                    <th>Service Area Zone</th>
+                    <th>Lead Scooper</th>
+                    <th>Scheduled Yards</th>
+                    <th>Capacity Utilization</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="adminRoutesTableBody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="dash-toast-container" id="dashToastContainer"></div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

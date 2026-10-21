@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#365640"/>
+  <!-- Paw Toe Pads -->
+  <ellipse cx="19" cy="20" rx="4.8" ry="6.8" transform="rotate(-18 19 20)" fill="#DCE9D5"/>
+  <ellipse cx="27.5" cy="15" rx="5" ry="7.2" transform="rotate(-5 27.5 15)" fill="#78966B"/>
+  <ellipse cx="36.5" cy="15" rx="5" ry="7.2" transform="rotate(5 36.5 15)" fill="#78966B"/>
+  <ellipse cx="45" cy="20" rx="4.8" ry="6.8" transform="rotate(18 45 20)" fill="#DCE9D5"/>
+  <!-- Main Palm Pad as an Organic Leaf -->
+  <path d="M32 23.5 C21 23.5 14 30.5 14 39 C14 47 21.5 52.5 32 52.5 C42.5 52.5 50 47 50 39 C50 30.5 43 23.5 32 23.5 Z" fill="#DCE9D5"/>
+  <!-- Leaf Vein Accents representing cleanliness & growth -->
+  <path d="M32 27.5 Q32 39 32 48.5" stroke="#365640" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <path d="M32 34.5 Q39.5 32.5 42.5 36" stroke="#365640" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M32 40.5 Q24.5 38.5 21.5 42" stroke="#365640" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+</svg>
