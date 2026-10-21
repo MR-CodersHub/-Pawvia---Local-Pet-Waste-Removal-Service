@@ -476,6 +476,10 @@ function updateUIForUser() {
     logoutOption.style.display = user.isLoggedIn ? "flex" : "none";
   }
 
+  document.querySelectorAll("#userDropdown .dropdown-divider").forEach(divider => {
+    divider.style.display = "none";
+  });
+
   const avatarPlaceholder = document.querySelector(".btn-user-account .user-avatar-placeholder");
   if (avatarPlaceholder) {
     if (user.isLoggedIn && user.name) {
